@@ -10,7 +10,7 @@ test('form header renders', () => {
     screen.getByText('Checkout Form', { exact: true }),
   ).toBeInTheDocument()
 })
-//
+
 test('form shows success message on submit with form details', async () => {
   render(<CheckoutForm />)
   expect(
