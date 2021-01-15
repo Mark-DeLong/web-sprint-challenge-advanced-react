@@ -13,6 +13,10 @@ test('form header renders', () => {
 
 test('form shows success message on submit with form details', async () => {
   render(<CheckoutForm />)
+  expect(
+    screen.getByText('Checkout Form', { exact: true }),
+  ).toBeInTheDocument();
+});
  
   const firstName = screen.getByLabelText(/first name/i)
   const lastName = screen.getByLabelText(/last name/i)

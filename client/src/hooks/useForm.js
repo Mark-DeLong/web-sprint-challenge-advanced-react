@@ -1,5 +1,5 @@
 import { useState } from 'react'
-//
+
 export default function useForm(initialValue) {
   //Hook
   const [showSuccessMessage, setShowSuccessMessage] = useState(false)
@@ -7,7 +7,7 @@ export default function useForm(initialValue) {
   //Change handler
   const handleChanges = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value })
-  }////dd
+  }
   //Submit handler
   const handleSubmit = (e) => {
     e.preventDefault()
