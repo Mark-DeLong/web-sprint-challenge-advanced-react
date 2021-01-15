@@ -15,11 +15,12 @@ test('form shows success message on submit with form details', async () => {
   render(<CheckoutForm />)
   expect(
     screen.getByText('Checkout Form', { exact: true }),
-  ).toBeInTheDocument();
+  ).toBeInTheDocument()
 })
 
 test('form shows success message on submit with form details', async () => {
-  render(<CheckoutForm />);
+  render(<CheckoutForm />)
+
   const firstName = screen.getByLabelText(/first name/i)
   const lastName = screen.getByLabelText(/last name/i)
   const address = screen.getByLabelText(/address/i)
@@ -38,7 +39,7 @@ test('form shows success message on submit with form details', async () => {
 
   userEvent.click(submitButt)
 
-  const success = await screen.findByTestId('successMessage');
+  const success = await screen.findByTestId('successMessage')
 
-  expect(success).toBeInTheDocument();
-});
+  expect(success).toBeInTheDocument()
+})
