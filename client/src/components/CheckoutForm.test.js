@@ -16,8 +16,10 @@ test('form shows success message on submit with form details', async () => {
   expect(
     screen.getByText('Checkout Form', { exact: true }),
   ).toBeInTheDocument();
-});
- 
+})
+
+test('form shows success message on submit with form details', async () => {
+  render(<CheckoutForm />);
   const firstName = screen.getByLabelText(/first name/i)
   const lastName = screen.getByLabelText(/last name/i)
   const address = screen.getByLabelText(/address/i)
